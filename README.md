@@ -23,6 +23,5 @@ A sample set of images along with their HOG feature images are given below:
 Once the HOG features are extracted, the classifier is trained to classify the image as car or non-car based on the HOG features. In this case, an SVM with a linear kernel was trained. The parameters used for the classifier were the default parameters. Test accuracy of 98.3% was obtained with this classifier. The feature vectors were not scaled since only the HOG features were used for training the classifier. If other features such as the spatial or the color histograms were used, then the feature vector has to be normalized. 
 
 ## Sliding window based search
-After the classifier is trained, the HOG features from the test images have to be obtained on a sliding window basis. 
-
+After the classifier is trained, the HOG features from the test images have to be obtained on a sliding window basis. This is performed in the function **find_cars()**. We have to decide the size of the window and the scale. We can also decide the region of the image in which we want the windows 
 
