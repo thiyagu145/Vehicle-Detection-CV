@@ -28,7 +28,7 @@ After the classifier is trained, the HOG features from the test images have to b
 
 ## Finding cars using heatmap
 Bounding boxes will be obtained for every region of the car and hence there will be more than one bounding box per car depending on the size of the car. To overcome this issue and get only one bounding box per car, heatmaps can be used. The pixels inside each of the bounding boxes are increased by value 1 based on the number of boxes they are present in. Once the heatmaps are obtained, a single bounding box can be obtained by finding the centroid of these heatmaps. Heatmaps of few of the test images are given below:
-![alt text](https://github.com/thiyagu145/Vehicle-Detection-CV/blob/master/output_images/Screen%20Shot%202018-08-04%20at%205.42.42%20PM.png)
+![final_output](https://github.com/thiyagu145/Vehicle-Detection-CV/blob/master/output_images/Screen%20Shot%202018-08-04%20at%205.42.42%20PM.png)
 
 ## Framing the pipeline for video processing
 Once the algorithm performs well on the testing images, the next step is to frame the pipeline for video processing. To obtain stable bounding boxes, a class for storing the bounding box is created and the last 15 lists of bounding boxes are stored. This is highly required to prevent false positives from appearing as a bounding box in the frame. The speed of the algorithm is approximately 10-15 frames per second. The pipeline is applied to the given project video and the output is stored as **final_output.mp4** in the following link ![alt text](https://github.com/thiyagu145/Vehicle-Detection-CV/blob/master/final_output.mp4)
